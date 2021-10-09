@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;600&display=swap");
+.theme-1 {
+  --body-bg: #3a4663;
+  --del-btn: #647198;
+  --del-btn-hover: #a2b2e1;
+  --del-and-reset-btn-fz: 20px;
+  --num-btn: #eae3dc;
+  --num-btn-text: #434a59;
+  --num-btn-fz: 32px;
+  --num-btn-hover: #fff;
+  --equl-btn: #d03f2f;
+  --equal-btn-hover: #f96b5b;
+  --reset-btn: #647198;
+  --reset-btn-hover: #a2b2e1;
+  --ball-color: #d03f2f;
+  --ball-hover: #f96b5b;
+  --input-bg: #181f33;
+  --input-br: 10px;
+  --input-text-fz: 48px;
+  --calc-btn-container: #242d44;
+  --calc-btn-container-br: 10px;
+  --calc-head-color: #ffffff;
+  --calc-head-fz: 32px;
+  --theme-text-fz: 12px;
+  --theme-text-color: #ffffff;
+  --theme-switcher-bg: #242d44;
+}
+.theme-2 {
+  --body-bg: #e6e6e6;
+  --del-btn: #378187;
+  --del-btn-hover: #62b5bc;
+  --del-and-reset-btn-fz: 20px;
+  --num-btn: #e5e4e1;
+  --num-btn-text: #36362c;
+  --num-btn-fz: 32px;
+  --num-btn-hover: #fff;
+  --equl-btn: #c85402;
+  --equal-btn-hover: #ff8a38;
+  --reset-btn: #378187;
+  --reset-btn-hover: #62b5bc;
+  --ball-color: #c85402;
+  --ball-hover: #ff8a38;
+  --input-bg: #eeeeee;
+  --input-br: 10px;
+  --input-text-fz: 48px;
+  --calc-btn-container: #d2cdcd;
+  --calc-btn-container-br: 10px;
+  --calc-head-color: #36362c;
+  --calc-head-fz: 32px;
+  --theme-text-color: #36362c;
+  --theme-text-fz: 12px;
+  --theme-switcher-bg: #d2cdcd;
+}
+.theme-3 {
+  --body-bg: #17062a;
+  --del-btn: #56077c;
+  --del-btn-hover: #8631af;
+  --del-and-reset-btn-fz: 20px;
+  --num-btn: #331c4d;
+  --num-btn-text: #ffe53d;
+  --num-btn-fz: 32px;
+  --num-btn-hover: #6c34ac;
+  --equl-btn: #00ded0;
+  --equal-btn-hover: #93fff8;
+  --reset-btn: #56077c;
+  --reset-btn-hover: #8631af;
+  --ball-color: #00ded0;
+  --ball-hover: #93fff8;
+  --input-bg: #1e0936;
+  --input-br: 10px;
+  --input-text-fz: 48px;
+  --calc-btn-container: #1e0936;
+  --calc-btn-container-br: 10px;
+  --calc-head-color: #ffe53d;
+  --calc-head-fz: 32px;
+  --theme-text-color: #ffe53d;
+  --theme-text-fz: 12px;
+  --theme-switcher-bg: #1e0936;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  height: 100%;
+}
+body {
+  line-height: 1.6;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: Spartan, sans-serif;
+  background-color: var(--body-bg);
+  color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  font-size: var(--calc-head-fz);
+  color: var(--calc-head-color);
+  font-weight: bold;
+}
+.switch {
+  background: var(--theme-switcher-bg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  height: 26px;
+  width: 64px;
+}
+.ball {
+  background: var(--ball-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ball:hover {
+  background: var(--ball-hover);
+}
+.theme-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--theme-text-fz);
+  color: var(--theme-text-color);
+  font-weight: bold;
+}
+.theme-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px 5px 5px;
+}
+.theme-num > div {
+  padding-right: 16px;
+}
+.output {
+  font-family: Spartan, sans-serif;
+  width: 100%;
+  height: 128px;
+  background-color: var(--input-bg);
+  outline: none;
+  border: 0px;
+  border-radius: var(--input-br);
+  color: rgb(255, 255, 255);
+  font-size: var(--input-text-fz);
+  text-align: right;
+  font-weight: bold;
+  letter-spacing: -0.8px;
+  padding: 38px 32px 36px 0px;
+}
+.wrapper {
+  background: var(--calc-btn-container);
+  border-radius: var(--calc-btn-container-br);
+  padding: 32px;
+  margin-top: 12px;
+}
+.calc-buttons {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 64px);
+  justify-content: space-around;
+  gap: 16px;
+  align-items: baseline;
+  height: auto;
+  max-width: 100%;
+}
+.calc-buttons > div {
+  cursor: pointer;
+}
+.calc-buttons .num {
+  background: var(--num-btn);
+  font-size: var(--num-btn-fz);
+  color: var(--num-btn-text);
+  border-radius: 10px;
+  box-shadow: rgb(179, 164, 151) 0px -4px 0px inset;
+  text-align: center;
+  font-weight: bold;
+  font-family: Spartan, sans-serif;
+  width: 101px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc-buttons .num:hover {
+  background-color: var(--num-btn-hover);
+}
+.del {
+  font-size: var(--del-and-reset-btn-fz);
+  background: var(--del-btn);
+  box-shadow: rgb(65, 78, 115) 0px -4px 0px inset;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Spartan, sans-serif;
+  width: 101px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.del:hover {
+  background: var(--del-btn-hover);
+}
+.buttons {
+  display: flex;
+  width: 100%;
+  margin-top: 24px;
+  justify-content: space-around;
+}
+.reset,
+.equal {
+  width: 227px;
+  height: 64px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-size: var(--del-and-reset-btn-fz);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset {
+  background: var(--reset-btn);
+  box-shadow: rgb(65, 78, 115) 0px -4px 0px inset;
+}
+.reset:hover {
+  background-color: var(--reset-btn-hover);
+}
+.equal {
+  background-color: var(--equl-btn);
+  box-shadow: rgb(147, 38, 26) 0px -4px 0px inset;
+  margin-left: 24px;
+}
+.equal:hover {
+  background: var(--equal-btn-hover);
+}
+.previous-operand,
+.current-operand {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.theme-text {
+  padding-top: 34px;
+  padding-right: 21px;
+}
+@media (max-height: 768px) {
+  .container {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .output {
+    height: 74px;
+  }
+  .calc-buttons .num,
+  .del {
+    width: 60px;
+    height: 64px;
+  }
+  .calc-buttons .num {
+    font-size: 28px;
+  }
+  .del {
+    font-size: 16px;
+  }
+  .calc-buttons {
+    grid-template-columns: repeat(4, 66px);
+    grid-template-rows: repeat(4, 63px);
+    height: 100%;
+    gap: 12px;
+  }
+  .reset,
+  .equal {
+    width: 133px;
+    height: 64px;
+    font-size: 16px;
+  }
+  main {
+    align-items: flex-start;
+  }
+  .buttons {
+    padding-bottom: 0px;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 540px;
+  }
+  .calc-buttons {
+    gap: 24px;
+    justify-content: center;
+  }
+  .buttons {
+    justify-content: center;
+  }
+}
+@media (max-width: 390px) {
+  .container {
+    width: 440px;
+  }
+  .wrapper {
+    padding: 10px;
+  }
+  .calc-buttons {
+    gap: 8px;
+  }
+  .calc-buttons .num,
+  .del {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 340px) {
+  .calc-buttons .num {
+    width: 50px;
+    height: 50px;
+  }
+  .calc-buttons {
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 60px);
+  }
+  .reset,
+  .equal {
+    width: 100px;
+    height: 50px;
+  }
+  .calc-buttons .num,
+  .del {
+    width: 50px;
+    height: 50px;
+  }
+}
