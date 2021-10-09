@@ -43,8 +43,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Faraz-mobin17/Calculator_WebApp)
+- Live Site URL: [Add live site URL here](https://upbeat-mcclintock-f3eb7a.netlify.app/)
 
 ## My process
 
@@ -70,4 +70,5 @@ I wanna make it more pixel perfect.
 - Website - [Faraz Mobin](https://github.com/Faraz-mobin17/)
 - Frontend Mentor - [@Faraz-mobin17](https://www.frontendmentor.io/profile/Faraz-mobin17)
 - Twitter - [@Faraz_mobin](https://twitter.com/Faraz_mobin)
+
 # Calculator_WebApp
